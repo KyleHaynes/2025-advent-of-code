@@ -7,7 +7,7 @@ options(scipen = 999)
 # Required packages.
 require(data.table)
 # Read input.
-d = data.table(v = readLines(path))
+d = data.table(v = readLines("input/03"))
 
 ## Part 1.
 d[, sum := as.numeric(lapply(v, function(x){
@@ -25,7 +25,7 @@ fun = function(x){
         tm <- x[1:(length(x) - i)]
         max_post <- which(x == max(tm))[1]
         max_val <- as.numeric(x[which(x == max(tm))[1]])
-        x <- x[(max_post+1):length(x)]
+        x <- x[(max_post + 1):length(x)]
         vec <- paste0(vec, max_val)
     }
     as.numeric(vec)
