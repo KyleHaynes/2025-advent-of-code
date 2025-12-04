@@ -11,6 +11,7 @@ require(reshape2)
 require(fastmatch)
 # Read input.
 d = readLines("input/04")
+# Munge.
 d = data.frame(rbindlist(list(strsplit(d, ""))))
 names(d) = 1:ncol(d)
 rownames(d) = 1:nrow(d)
