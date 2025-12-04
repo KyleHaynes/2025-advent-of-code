@@ -25,10 +25,10 @@ fun = function(d, pos, lt = 4){
     if(d[i]$v != "@") return(FALSE)
     r = as.numeric(d[pos]$row)
     ca = as.numeric(d[pos]$col)
-    l = d[row %between% c(r-1, r+1) & col %between% c(ca-1, ca+1)][(row != r | col != ca)]$v
+    l = d[row %between% c(r-1, r+1) & col %between% c(ca-1, ca+1) & (row != r | col != ca)]$v
     sum(l == "@") < lt
 }
-for(i in 1:nrow(d)){
+for(i in which(d$v == "@")){
     d[i, qual := fun(d, i)]
 }
 sum(d[(qual)]$qual)
