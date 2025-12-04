@@ -7,13 +7,13 @@ renv::restore(prompt = FALSE)
 # Required packages.
 require(data.table)
 # Read input.
-d <- readLines("input/01")
+d = readLines("input/01")
 # Prep data.
-index <- 0:99
-index <- rep(index, 1E5)
-pos <- which(index == 0)[length(which(index == 0))/2]
+index = 0:99
+index = rep(index, 1E5)
+pos = which(index == 0)[length(which(index == 0))/2]
 index[pos]
-d <- data.table(n = c(50, as.numeric(gsub("\\D+", "", d))), d = c("R", gsub("\\d+", "", d)))
+d = data.table(n = c(50, as.numeric(gsub("\\D+", "", d))), d = c("R", gsub("\\d+", "", d)))
 
 ## Part 1.
 d[, n := fifelse(d == "L", n * -1, n)]
@@ -31,7 +31,7 @@ d[, x := as.numeric(NA)]
 # A slow loop, however, it works. The indexing is gross because I'm lazy, dumb. It's convoluted
 # because you need to exclude the starting/end positions.
 for(i in 1:(nrow(d)-1)) {
-    xx <- as.numeric(sum(index[c(d$p[i]:d$p[i+1])][-1][1:length(index[c(d$p[i]:d$p[i+1])][-1])-1] == 0))
+    xx = as.numeric(sum(index[c(d$p[i]:d$p[i+1])][-1][1:length(index[c(d$p[i]:d$p[i+1])][-1])-1] == 0))
     d[i, x := xx]
 }
 

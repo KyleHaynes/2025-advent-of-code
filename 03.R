@@ -20,14 +20,14 @@ sum(d$sum)
 ## Part 2.
 # Define a gross function.
 fun = function(x){
-    x <- strsplit(x, "")[[1]]
-    vec <- as.numeric()
+    x = strsplit(x, "")[[1]]
+    vec = as.numeric()
     for(i in 11:0){
-        tm <- x[1:(length(x) - i)]
-        max_post <- which(x == max(tm))[1]
-        max_val <- as.numeric(x[which(x == max(tm))[1]])
-        x <- x[(max_post + 1):length(x)]
-        vec <- paste0(vec, max_val)
+        tm = x[1:(length(x) - i)]
+        max_post = which(x == max(tm))[1]
+        max_val = as.numeric(x[which(x == max(tm))[1]])
+        x = x[(max_post + 1):length(x)]
+        vec = paste0(vec, max_val)
     }
     as.numeric(vec)
 }
