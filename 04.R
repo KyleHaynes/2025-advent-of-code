@@ -20,7 +20,7 @@ setkey(d, row, col)
 
 
 ## Part 1.
-fun <- function(d, pos, lt = 4){
+fun = function(d, pos, lt = 4){
     if(d[i]$v != "@") return(FALSE)
     r = as.numeric(d[pos]$row)
     ca = as.numeric(d[pos]$col)
@@ -32,6 +32,7 @@ for(i in 1:nrow(d)){
 }
 sum(d[(qual)]$qual)
 # 1467
+
 
 ## Part 2.
 for(j in 1:1000){
