@@ -3,6 +3,7 @@
 # Like day 1, only using R as a resource (so R help if needed / no gen ai or s/o etc)
 
 ## Setup.
+renv::restore(prompt = FALSE)
 options(scipen = 999)
 # Required packages.
 require(data.table)

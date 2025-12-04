@@ -3,6 +3,7 @@
 # It ain't pretty, but it gets the job done.
 
 ## Setup.
+renv::restore(prompt = FALSE)
 # Required packages.
 require(data.table)
 # Read input.
