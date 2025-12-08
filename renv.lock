@@ -9,6 +9,23 @@
     ]
   },
   "Packages": {
+    "Matrix": {
+      "Package": "Matrix",
+      "Version": "1.7-3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "grDevices",
+        "graphics",
+        "grid",
+        "lattice",
+        "methods",
+        "stats",
+        "utils"
+      ],
+      "Hash": "fb578c2b5d796882c60e9f770352f7c4"
+    },
     "Rcpp": {
       "Package": "Rcpp",
       "Version": "1.1.0",
@@ -30,6 +47,16 @@
         "utils"
       ],
       "Hash": "16850760556401a2eeb27d39bd11c9cb"
+    },
+    "cpp11": {
+      "Package": "cpp11",
+      "Version": "0.5.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "2720e3fd3dad08f34b19b56b3d6f073d"
     },
     "data.table": {
       "Package": "data.table",
@@ -63,6 +90,44 @@
       ],
       "Hash": "5899f1eaa825580172bb56c08266f37c"
     },
+    "igraph": {
+      "Package": "igraph",
+      "Version": "2.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "Matrix",
+        "R",
+        "cli",
+        "cpp11",
+        "grDevices",
+        "graphics",
+        "lifecycle",
+        "magrittr",
+        "methods",
+        "pkgconfig",
+        "rlang",
+        "stats",
+        "utils",
+        "vctrs"
+      ],
+      "Hash": "8f3943f8c98e594bff132804aa4edf57"
+    },
+    "lattice": {
+      "Package": "lattice",
+      "Version": "0.22-6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "grDevices",
+        "graphics",
+        "grid",
+        "stats",
+        "utils"
+      ],
+      "Hash": "cc5ac1ba4c238c7ca9fa6a87ca11a7e2"
+    },
     "lifecycle": {
       "Package": "lifecycle",
       "Version": "1.0.4",
@@ -85,6 +150,16 @@
         "R"
       ],
       "Hash": "8b3b213aa0c54a0dec254288ccb545d1"
+    },
+    "pkgconfig": {
+      "Package": "pkgconfig",
+      "Version": "2.0.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "utils"
+      ],
+      "Hash": "01f28d4278f15c76cddbea05899c5d6f"
     },
     "plyr": {
       "Package": "plyr",
